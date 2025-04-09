@@ -2,14 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/contexts/language-context";
+import LanguageToggle from "./language-toggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,6 +34,14 @@ export default function Navbar() {
     };
   }, []);
 
+  const navItems = [
+    { name: t("nav.home"), path: "/" },
+    { name: t("nav.services"), path: "/services" },
+    { name: t("nav.gallery"), path: "/gallery" },
+    { name: t("nav.about"), path: "/about" },
+    { name: t("nav.contact"), path: "/contact" },
+  ];
+
   return (
     <header
       className={cn(
@@ -38,19 +50,22 @@ export default function Navbar() {
       )}
     >
       <div className="container flex items-center justify-between px-4">
-        <Link href="/" className="font-serif text-2xl tracking-wide">
-          Artisan Press
+        <Link href="/" className="flex items-center">
+          <div className="relative h-8 md:h-10 w-auto transition-all duration-300">
+            <Image
+              src="/icon.png"
+              alt={t("site.name")}
+              width={180}
+              height={40}
+              className="object-contain h-full w-auto"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {[
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "Gallery", path: "/gallery" },
-            { name: "About", path: "/about" },
-            { name: "Contact", path: "/contact" },
-          ].map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.path}
               href={item.path}
@@ -58,12 +73,13 @@ export default function Navbar() {
                 "text-sm tracking-wide hover:text-primary transition-colors relative py-1",
                 pathname === item.path ? "text-primary" : "text-neutral-800",
                 pathname === item.path &&
-                  "after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-primary"
+                  "after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:primary-700"
               )}
             >
               {item.name}
             </Link>
           ))}
+          <LanguageToggle />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -88,13 +104,7 @@ export default function Navbar() {
         )}
       >
         <div className="container flex flex-col h-full justify-center items-center space-y-8 p-4">
-          {[
-            { name: "Home", path: "/" },
-            { name: "Services", path: "/services" },
-            { name: "Gallery", path: "/gallery" },
-            { name: "About", path: "/about" },
-            { name: "Contact", path: "/contact" },
-          ].map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.path}
               href={item.path}
@@ -107,6 +117,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
+          <LanguageToggle />
         </div>
       </div>
     </header>

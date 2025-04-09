@@ -5,6 +5,7 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/contexts/language-context"
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -18,9 +19,9 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "Artisan Press | Fine Printing & Design Studio",
-  description: "A boutique printing studio specializing in letterpress, foil stamping, and custom printing solutions.",
-    generator: 'v0.dev'
+  title: "Prensa Artesanal | Estudio de Impresión y Diseño",
+  description:
+    "Un estudio boutique de impresión especializado en letterpress, estampado en foil y soluciones de impresión personalizadas.",
 }
 
 export default function RootLayout({
@@ -29,19 +30,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${playfair.variable} ${lato.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <LanguageProvider>
+            <div className="flex flex-col min-h-screen">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
   )
 }
-
-
-import './globals.css'

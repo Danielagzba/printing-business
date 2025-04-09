@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -13,7 +17,7 @@ export default function Home() {
           <div className="relative h-full w-full">
             <Image
               src="/printing.jpg"
-              alt="Artistic printing process"
+              alt="Proceso de impresión artística"
               fill
               priority
               className="object-cover"
@@ -23,28 +27,27 @@ export default function Home() {
         <div className="container relative z-10 px-4 py-20 md:py-32">
           <div className="max-w-xl">
             <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight mb-6">
-              <span className="block">Servigrafic</span>
-              <span className="block">Solutions</span>
+              <span className="block">{t("hero.title.line1")}</span>
+              <span className="block">{t("hero.title.line2")}</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-neutral-600 max-w-md">
-              Where creativity meets exceptional quality. We transform your
-              ideas into beautifully crafted printed pieces.
+              {t("hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-amber-800 rounded-none px-8"
+                className="primary-700 hover:primary-800 rounded-none px-8"
               >
-                <Link href="/gallery">Explore Our Work</Link>
+                <Link href="/gallery">{t("hero.button.explore")}</Link>
               </Button>
               <Button
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-amber-50 rounded-none px-8"
+                className="border-primary text-primary hover:primary-50 rounded-none px-8"
               >
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="/contact">{t("hero.button.contact")}</Link>
               </Button>
             </div>
           </div>
@@ -57,30 +60,24 @@ export default function Home() {
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
-              The Art of Print
+              {t("intro.title")}
             </h2>
             <p className="text-lg text-neutral-600 mb-12 leading-relaxed">
-              We believe in the power of print to captivate, communicate, and
-              connect. Our studio combines traditional craftsmanship with modern
-              techniques to create printed pieces that stand out in a digital
-              world.
+              {t("intro.description")}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
                 {
-                  title: "Craftsmanship",
-                  description:
-                    "Meticulous attention to detail in every printed piece we create.",
+                  title: t("intro.craftsmanship.title"),
+                  description: t("intro.craftsmanship.description"),
                 },
                 {
-                  title: "Innovation",
-                  description:
-                    "Blending traditional techniques with cutting-edge technology.",
+                  title: t("intro.innovation.title"),
+                  description: t("intro.innovation.description"),
                 },
                 {
-                  title: "Quality",
-                  description:
-                    "Premium materials and processes for exceptional results.",
+                  title: t("intro.quality.title"),
+                  description: t("intro.quality.description"),
                 },
               ].map((item, index) => (
                 <div key={index} className="text-center">
@@ -97,37 +94,37 @@ export default function Home() {
       <section className="py-24 bg-neutral-50">
         <div className="container px-4">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-16 text-center">
-            Featured Work
+            {t("featured.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Letterpress Stationery",
-                category: "Business",
+                title: "Papelería Letterpress",
+                category: "Negocios",
                 image: "/placeholder.svg?height=600&width=600",
               },
               {
-                title: "Hand-bound Notebooks",
-                category: "Custom",
+                title: "Cuadernos Artesanales",
+                category: "Personalizado",
                 image: "/placeholder.svg?height=600&width=600",
               },
               {
-                title: "Foil Stamped Invitations",
-                category: "Wedding",
+                title: "Invitaciones con Foil",
+                category: "Bodas",
                 image: "/placeholder.svg?height=600&width=600",
               },
               {
-                title: "Embossed Business Cards",
-                category: "Business",
+                title: "Tarjetas de Visita en Relieve",
+                category: "Negocios",
                 image: "/placeholder.svg?height=600&width=600",
               },
               {
-                title: "Screen Printed Posters",
-                category: "Art",
+                title: "Pósters Serigrafía",
+                category: "Arte",
                 image: "/placeholder.svg?height=600&width=600",
               },
               {
-                title: "Custom Packaging",
+                title: "Packaging Personalizado",
                 category: "Retail",
                 image: "/placeholder.svg?height=600&width=600",
               },
@@ -156,9 +153,9 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-amber-50 rounded-none px-8"
+              className="border-primary text-primary hover:primary-50 rounded-none px-8"
             >
-              <Link href="/gallery">View All Work</Link>
+              <Link href="/gallery">{t("featured.viewAll")}</Link>
             </Button>
           </div>
         </div>
@@ -169,29 +166,26 @@ export default function Home() {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-3xl md:text-4xl font-light mb-16 text-center">
-              Our Process
+              {t("process.title")}
             </h2>
             <div className="space-y-24">
               {[
                 {
                   number: "01",
-                  title: "Consultation",
-                  description:
-                    "We begin with a thoughtful conversation about your vision, goals, and preferences. This helps us understand the essence of your project and how we can bring it to life through print.",
+                  title: t("process.consultation.title"),
+                  description: t("process.consultation.description"),
                   image: "/placeholder.svg?height=600&width=800",
                 },
                 {
                   number: "02",
-                  title: "Design & Concept",
-                  description:
-                    "Our designers translate your ideas into visual concepts, considering everything from paper selection to printing techniques. We explore creative possibilities while keeping your objectives in focus.",
+                  title: t("process.design.title"),
+                  description: t("process.design.description"),
                   image: "/placeholder.svg?height=600&width=800",
                 },
                 {
                   number: "03",
-                  title: "Crafting & Production",
-                  description:
-                    "With approved designs in hand, our master printers bring your project to life using a blend of traditional craftsmanship and modern techniques. Each piece receives meticulous attention to detail.",
+                  title: t("process.production.title"),
+                  description: t("process.production.description"),
                   image: "/placeholder.svg?height=600&width=800",
                 },
               ].map((step, index) => (
@@ -228,30 +222,30 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-amber-50">
+      <section className="py-24 primary-50">
         <div className="container px-4">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-16 text-center">
-            Client Stories
+            {t("testimonials.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 quote:
-                  "The attention to detail and quality of materials exceeded our expectations. Our wedding invitations were absolutely stunning.",
-                author: "Emily & James",
-                project: "Wedding Suite",
+                  "La atención al detalle y la calidad de los materiales superaron nuestras expectativas. Nuestras invitaciones de boda fueron absolutamente impresionantes.",
+                author: "Emma y Tomás",
+                project: "Colección de Boda",
               },
               {
                 quote:
-                  "Working with this studio transformed our brand identity. The letterpress business cards make a lasting impression on everyone who receives them.",
-                author: "Sarah Johnson",
-                project: "Brand Identity",
+                  "Trabajar con este estudio transformó la identidad de nuestra marca. Las tarjetas de visita en letterpress causan una impresión duradera en todos los que las reciben.",
+                author: "Sara Jiménez",
+                project: "Identidad de Marca",
               },
               {
                 quote:
-                  "The custom notebooks they created for our company retreat were beautiful and thoughtfully crafted. Everyone loved the personal touch.",
-                author: "Michael Chen",
-                project: "Corporate Gifts",
+                  "Los cuadernos personalizados que crearon para el retiro de nuestra empresa fueron hermosos y elaborados con esmero. A todos les encantó el toque personal.",
+                author: "Miguel Chen",
+                project: "Regalos Corporativos",
               },
             ].map((testimonial, index) => (
               <div
@@ -274,23 +268,21 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary text-white">
+      <section className="py-24 primary-700 text-white bg-primary">
         <div className="container px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
-            Let's Create Something Beautiful
+            {t("cta.title")}
           </h2>
           <p className="text-lg max-w-2xl mx-auto mb-10 opacity-90">
-            Ready to bring your printing project to life? Contact us to discuss
-            your ideas and discover how we can help create something
-            extraordinary.
+            {t("cta.description")}
           </p>
           <Button
             asChild
             size="lg"
             variant="outline"
-            className="text-white border-white hover:bg-amber-800 rounded-none px-8"
+            className="text-primary border-white hover:primary-800 rounded-none px-8"
           >
-            <Link href="/contact">Start a Project</Link>
+            <Link href="/contact">{t("cta.button")}</Link>
           </Button>
         </div>
       </section>

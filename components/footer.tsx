@@ -1,7 +1,12 @@
+"use client"
+
 import Link from "next/link"
 import { Instagram, Facebook, Twitter } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="bg-neutral-900 text-neutral-200 pt-16 pb-8">
       <div className="container px-4">
@@ -9,10 +14,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="font-serif text-2xl text-white tracking-wide">
-              Artisan Press
+              {t("site.name")}
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed">
-              A boutique printing studio specializing in letterpress, foil stamping, and custom printing solutions.
+              Un estudio boutique de impresión especializado en letterpress, estampado en foil y soluciones de impresión
+              personalizadas.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-amber-500 transition-colors">
@@ -32,31 +38,31 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">Services</h3>
+            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">{t("footer.services")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/services#letterpress" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Letterpress Printing
+                  Letterpress
                 </Link>
               </li>
               <li>
                 <Link href="/services#foil" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Foil Stamping
+                  Estampado en Foil
                 </Link>
               </li>
               <li>
                 <Link href="/services#embossing" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Embossing & Debossing
+                  Relieve y Bajorrelieve
                 </Link>
               </li>
               <li>
                 <Link href="/services#custom" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Custom Stationery
+                  Papelería Personalizada
                 </Link>
               </li>
               <li>
                 <Link href="/services#business" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Business Printing
+                  Impresión Corporativa
                 </Link>
               </li>
             </ul>
@@ -64,31 +70,31 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">Company</h3>
+            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">{t("nav.about")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Our Story
+                  {t("about.title")}
                 </Link>
               </li>
               <li>
                 <Link href="/about#process" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Process
+                  {t("process.title")}
                 </Link>
               </li>
               <li>
                 <Link href="/about#team" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Team
+                  Equipo
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Gallery
+                  {t("nav.gallery")}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-neutral-400 hover:text-amber-500 transition-colors">
-                  Contact
+                  {t("nav.contact")}
                 </Link>
               </li>
             </ul>
@@ -96,26 +102,26 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">Contact</h3>
+            <h3 className="text-white font-medium mb-4 uppercase text-sm tracking-wider">{t("footer.contact")}</h3>
             <address className="not-italic text-neutral-400 space-y-2">
-              <p>123 Artisan Way</p>
-              <p>Craftsville, CA 90210</p>
-              <p className="mt-4">hello@artisanpress.com</p>
-              <p>(555) 123-4567</p>
+              <p>Calle Artesanal 123</p>
+              <p>Madrid, España 28001</p>
+              <p className="mt-4">hola@prensaartesanal.com</p>
+              <p>+34 91 123 4567</p>
             </address>
           </div>
         </div>
 
         <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-500 text-sm">
-            &copy; {new Date().getFullYear()} Artisan Press. All rights reserved.
+            &copy; {new Date().getFullYear()} {t("site.name")}. {t("footer.rights")}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-neutral-500 text-sm hover:text-amber-500 transition-colors">
-              Privacy Policy
+              {t("footer.privacy")}
             </Link>
             <Link href="/terms" className="text-neutral-500 text-sm hover:text-amber-500 transition-colors">
-              Terms of Service
+              {t("footer.terms")}
             </Link>
           </div>
         </div>

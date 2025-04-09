@@ -280,7 +280,7 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-16 primary-700 text-white">
         <div className="container px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
             Inspired by What You See?
@@ -294,7 +294,7 @@ export default function GalleryPage() {
             asChild
             size="lg"
             variant="outline"
-            className="text-white border-white hover:bg-amber-800 rounded-none px-8"
+            className="text-white border-white hover:primary-800 rounded-none px-8"
           >
             <Link href="/contact">Start Your Project</Link>
           </Button>

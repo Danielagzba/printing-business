@@ -279,7 +279,7 @@ export default function AboutPage() {
               </div>
               <Button
                 asChild
-                className="mt-6 bg-primary hover:bg-amber-800 rounded-none px-8"
+                className="mt-6 primary-700 hover:primary-800 rounded-none px-8"
               >
                 <Link href="/contact">Schedule a Visit</Link>
               </Button>
@@ -325,7 +325,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 primary-700 text-white">
         <div className="container px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
             Work With Us
@@ -339,7 +339,7 @@ export default function AboutPage() {
             asChild
             size="lg"
             variant="outline"
-            className="text-white border-white hover:bg-amber-800 rounded-none px-8"
+            className="text-white border-white hover:primary-800 rounded-none px-8"
           >
             <Link href="/contact">Get in Touch</Link>
           </Button>

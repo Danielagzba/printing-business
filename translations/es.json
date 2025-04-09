@@ -1,0 +1,63 @@
+{
+  "nav.home": "Inicio",
+  "nav.services": "Servicios",
+  "nav.gallery": "Galería",
+  "nav.about": "Nosotros",
+  "nav.contact": "Contacto",
+  "language.switch": "English",
+
+  "hero.title.line1": "Servigrafic",
+  "hero.title.line2": "Solutions",
+  "hero.subtitle": "Donde la creatividad se encuentra con la calidad excepcional. Transformamos tus ideas en piezas impresas bellamente elaboradas.",
+  "hero.button.explore": "Explorar Nuestro Trabajo",
+  "hero.button.contact": "Contáctanos",
+
+  "intro.title": "El Arte de la Impresión",
+  "intro.description": "Creemos en el poder de la impresión para cautivar, comunicar y conectar. Nuestro estudio combina la artesanía tradicional con técnicas modernas para crear piezas impresas que destacan en un mundo digital.",
+  "intro.craftsmanship.title": "Artesanía",
+  "intro.craftsmanship.description": "Meticulosa atención al detalle en cada pieza impresa que creamos.",
+  "intro.innovation.title": "Innovación",
+  "intro.innovation.description": "Combinando técnicas tradicionales con tecnología de vanguardia.",
+  "intro.quality.title": "Calidad",
+  "intro.quality.description": "Materiales y procesos premium para resultados excepcionales.",
+
+  "featured.title": "Trabajos Destacados",
+  "featured.viewAll": "Ver Todo",
+
+  "process.title": "Nuestro Proceso",
+  "process.consultation.title": "Consulta",
+  "process.consultation.description": "Comenzamos con una conversación reflexiva sobre tu visión, objetivos y preferencias. Esto nos ayuda a entender la esencia de tu proyecto y cómo podemos darle vida a través de la impresión.",
+  "process.design.title": "Diseño y Concepto",
+  "process.design.description": "Nuestros diseñadores traducen tus ideas en conceptos visuales, considerando todo, desde la selección del papel hasta las técnicas de impresión. Exploramos posibilidades creativas manteniendo tus objetivos en foco.",
+  "process.production.title": "Elaboración y Producción",
+  "process.production.description": "Con los diseños aprobados, nuestros maestros impresores dan vida a tu proyecto utilizando una combinación de artesanía tradicional y técnicas modernas. Cada pieza recibe una atención meticulosa al detalle.",
+
+  "testimonials.title": "Historias de Clientes",
+
+  "cta.title": "Creemos Algo Hermoso",
+  "cta.description": "¿Listo para dar vida a tu proyecto de impresión? Contáctanos para discutir tus ideas y descubrir cómo podemos ayudarte a crear algo extraordinario.",
+  "cta.button": "Iniciar un Proyecto",
+
+  "services.title": "Nuestros Servicios",
+  "services.subtitle": "Descubre nuestra gama de técnicas y servicios de impresión premium, cada uno elaborado con atención al detalle y excelencia artística.",
+
+  "gallery.title": "Nuestra Galería",
+  "gallery.subtitle": "Explora nuestra colección de proyectos de impresión artísticamente elaborados",
+  "gallery.filter.all": "Todos",
+  "gallery.filter.letterpress": "Letterpress",
+  "gallery.filter.foil": "Estampado en Foil",
+  "gallery.filter.business": "Negocios",
+  "gallery.filter.wedding": "Bodas",
+  "gallery.filter.art": "Arte",
+  "gallery.filter.custom": "Personalizado",
+
+  "about.title": "Nuestra Historia",
+  "about.subtitle": "Elaborando hermosas piezas impresas con pasión y precisión desde 2010",
+
+  "footer.quickLinks": "Enlaces Rápidos",
+  "footer.services": "Servicios",
+  "footer.contact": "Contacto",
+  "footer.rights": "Todos los derechos reservados.",
+  "footer.privacy": "Política de Privacidad",
+  "footer.terms": "Términos de Servicio"
+}

@@ -1,0 +1,65 @@
+{
+  "site.name": "Artisan Press",
+  "nav.home": "Home",
+  "nav.services": "Services",
+  "nav.gallery": "Gallery",
+  "nav.about": "About",
+  "nav.contact": "Contact",
+  "language.switch": "Español",
+
+  "hero.title.line1": "Artful",
+  "hero.title.line2": "Printing",
+  "hero.title.line3": "Craftsmanship",
+  "hero.subtitle": "Where creativity meets exceptional quality. We transform your ideas into beautifully crafted printed pieces.",
+  "hero.button.explore": "Explore Our Work",
+  "hero.button.contact": "Get in Touch",
+
+  "intro.title": "The Art of Print",
+  "intro.description": "We believe in the power of print to captivate, communicate, and connect. Our studio combines traditional craftsmanship with modern techniques to create printed pieces that stand out in a digital world.",
+  "intro.craftsmanship.title": "Craftsmanship",
+  "intro.craftsmanship.description": "Meticulous attention to detail in every printed piece we create.",
+  "intro.innovation.title": "Innovation",
+  "intro.innovation.description": "Blending traditional techniques with cutting-edge technology.",
+  "intro.quality.title": "Quality",
+  "intro.quality.description": "Premium materials and processes for exceptional results.",
+
+  "featured.title": "Featured Work",
+  "featured.viewAll": "View All Work",
+
+  "process.title": "Our Process",
+  "process.consultation.title": "Consultation",
+  "process.consultation.description": "We begin with a thoughtful conversation about your vision, goals, and preferences. This helps us understand the essence of your project and how we can bring it to life through print.",
+  "process.design.title": "Design & Concept",
+  "process.design.description": "Our designers translate your ideas into visual concepts, considering everything from paper selection to printing techniques. We explore creative possibilities while keeping your objectives in focus.",
+  "process.production.title": "Crafting & Production",
+  "process.production.description": "With approved designs in hand, our master printers bring your project to life using a blend of traditional craftsmanship and modern techniques. Each piece receives meticulous attention to detail.",
+
+  "testimonials.title": "Client Stories",
+
+  "cta.title": "Let's Create Something Beautiful",
+  "cta.description": "Ready to bring your printing project to life? Contact us to discuss your ideas and discover how we can help create something extraordinary.",
+  "cta.button": "Start a Project",
+
+  "services.title": "Our Services",
+  "services.subtitle": "Discover our range of premium printing techniques and services, each crafted with attention to detail and artistic excellence.",
+
+  "gallery.title": "Our Gallery",
+  "gallery.subtitle": "Explore our collection of artfully crafted print projects",
+  "gallery.filter.all": "All",
+  "gallery.filter.letterpress": "Letterpress",
+  "gallery.filter.foil": "Foil Stamping",
+  "gallery.filter.business": "Business",
+  "gallery.filter.wedding": "Wedding",
+  "gallery.filter.art": "Art Prints",
+  "gallery.filter.custom": "Custom",
+
+  "about.title": "Our Story",
+  "about.subtitle": "Crafting beautiful printed pieces with passion and precision since 2010",
+
+  "footer.quickLinks": "Quick Links",
+  "footer.services": "Services",
+  "footer.contact": "Contact",
+  "footer.rights": "All rights reserved.",
+  "footer.privacy": "Privacy Policy",
+  "footer.terms": "Terms of Service"
+}

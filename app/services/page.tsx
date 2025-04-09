@@ -146,7 +146,7 @@ export default function ServicesPage() {
                   <ul className="space-y-2">
                     {service.details.map((detail, i) => (
                       <li key={i} className="flex items-center">
-                        <span className="h-1 w-1 rounded-full bg-primary mr-2"></span>
+                        <span className="h-1 w-1 rounded-full primary-700 mr-2"></span>
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -256,7 +256,7 @@ export default function ServicesPage() {
               </p>
               <Button
                 asChild
-                className="bg-primary hover:bg-amber-800 rounded-none px-8"
+                className="primary-700 hover:primary-800 rounded-none px-8"
               >
                 <Link href="/contact">Discuss Your Project</Link>
               </Button>
@@ -321,7 +321,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 primary-700 text-white">
         <div className="container px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
             Ready to Start Your Project?
@@ -335,7 +335,7 @@ export default function ServicesPage() {
             asChild
             size="lg"
             variant="outline"
-            className="text-white border-white hover:bg-amber-800 rounded-none px-8"
+            className="text-white border-white hover:primary-800 rounded-none px-8"
           >
             <Link href="/contact">Get in Touch</Link>
           </Button>
