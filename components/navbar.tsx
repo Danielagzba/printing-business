@@ -83,7 +83,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
+        {/* <button
           className="md:hidden"
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -93,7 +93,7 @@ export default function Navbar() {
           ) : (
             <Menu className="h-6 w-6" />
           )}
-        </button>
+        </button> */}
       </div>
 
       {/* Mobile Navigation */}
