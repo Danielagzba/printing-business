@@ -179,7 +179,7 @@ export default function Home() {
                   number: "02",
                   title: t("process.design.title"),
                   description: t("process.design.description"),
-                  image: "/diseño.png",
+                  image: "/diseno.png",
                 },
                 {
                   number: "03",
