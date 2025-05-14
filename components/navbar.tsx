@@ -35,11 +35,11 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: t("nav.home"), path: "/" },
-    { name: t("nav.services"), path: "/services" },
-    { name: t("nav.gallery"), path: "/gallery" },
-    { name: t("nav.about"), path: "/about" },
-    { name: t("nav.contact"), path: "/contact" },
+    // { name: t("nav.home"), path: "/" },
+    // { name: t("nav.services"), path: "/services" },
+    // { name: t("nav.gallery"), path: "/gallery" },
+    // { name: t("nav.about"), path: "/about" },
+    // { name: t("nav.contact"), path: "/contact" },
   ];
 
   return (
@@ -79,7 +79,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
         </nav>
 
         {/* Mobile Menu Button */}

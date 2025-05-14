@@ -39,7 +39,7 @@ export default function Home() {
                 size="lg"
                 className="primary-700 hover:primary-800 rounded-none px-8"
               >
-                <Link href="/gallery">{t("hero.button.explore")}</Link>
+                {/* <Link href="/gallery">{t("hero.button.explore")}</Link> */}
               </Button>
               <Button
                 asChild
@@ -47,7 +47,7 @@ export default function Home() {
                 variant="outline"
                 className="border-primary text-primary hover:primary-50 rounded-none px-8"
               >
-                <Link href="/contact">{t("hero.button.contact")}</Link>
+                {/* <Link href="/contact">{t("hero.button.contact")}</Link> */}
               </Button>
             </div>
           </div>
@@ -99,34 +99,34 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Papelería Letterpress",
-                category: "Negocios",
-                image: "/placeholder.svg?height=600&width=600",
+                title: "Libretas",
+
+                image: "/libreta.png",
               },
               {
-                title: "Cuadernos Artesanales",
-                category: "Personalizado",
-                image: "/placeholder.svg?height=600&width=600",
+                title: "Libretas con Suaje",
+
+                image: "/libreta_suaje.png",
               },
               {
-                title: "Invitaciones con Foil",
-                category: "Bodas",
-                image: "/placeholder.svg?height=600&width=600",
-              },
-              {
-                title: "Tarjetas de Visita en Relieve",
-                category: "Negocios",
-                image: "/placeholder.svg?height=600&width=600",
-              },
-              {
-                title: "Pósters Serigrafía",
-                category: "Arte",
-                image: "/placeholder.svg?height=600&width=600",
+                title: "Publicidad",
+
+                image: "/revistas.png",
               },
               {
                 title: "Packaging Personalizado",
-                category: "Retail",
-                image: "/placeholder.svg?height=600&width=600",
+
+                image: "/cajas.png",
+              },
+              {
+                title: "Calendarios",
+                category: "Arte",
+                image: "/calendario.png",
+              },
+              {
+                title: "Carpetas",
+
+                image: "/carpetas.png",
               },
             ].map((work, index) => (
               <div key={index} className="group cursor-pointer">
@@ -148,7 +148,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-16">
+          {/* <div className="text-center mt-16">
             <Button
               asChild
               variant="outline"
@@ -157,7 +157,7 @@ export default function Home() {
             >
               <Link href="/gallery">{t("featured.viewAll")}</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -174,19 +174,19 @@ export default function Home() {
                   number: "01",
                   title: t("process.consultation.title"),
                   description: t("process.consultation.description"),
-                  image: "/placeholder.svg?height=600&width=800",
+                  image: "/consulta.jpg",
                 },
                 {
                   number: "02",
                   title: t("process.design.title"),
                   description: t("process.design.description"),
-                  image: "/placeholder.svg?height=600&width=800",
+                  image: "/diseño.png",
                 },
                 {
                   number: "03",
                   title: t("process.production.title"),
                   description: t("process.production.description"),
-                  image: "/placeholder.svg?height=600&width=800",
+                  image: "/machine.png",
                 },
               ].map((step, index) => (
                 <div
@@ -282,7 +282,7 @@ export default function Home() {
             variant="outline"
             className="text-primary border-white hover:primary-800 rounded-none px-8"
           >
-            <Link href="/contact">{t("cta.button")}</Link>
+            {/* <Link href="/contact">{t("cta.button")}</Link> */}
           </Button>
         </div>
       </section>

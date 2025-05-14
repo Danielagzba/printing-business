@@ -6,87 +6,70 @@ export default function ServicesPage() {
   const services = [
     {
       id: "letterpress",
-      title: "Letterpress Printing",
+      title: "Libretas",
       description:
-        "Our letterpress printing creates a tactile impression on premium paper, resulting in a sophisticated and elegant finish. Each piece is carefully crafted using our vintage presses, combining traditional techniques with modern design.",
+        "Nuestras libretas están diseñadas con atención al detalle, utilizando materiales de alta calidad para lograr un acabado funcional y estético. Cada pieza combina practicidad con diseño, ideal para quienes valoran la organización sin sacrificar el estilo.",
       details: [
-        "Business cards & stationery",
-        "Wedding invitations",
-        "Greeting cards",
-        "Custom announcements",
-        "Art prints",
+        "Libretas personalizadas para empresas",
+        "Agendas diarias o semanales",
+        "Cuadernos tipo bullet journal",
+        "Libretas para eventos o conferencias",
+        "Libretas de viaje o escritura personal",
       ],
-      image: "/placeholder.svg?height=800&width=1200",
-    },
-    {
-      id: "foil",
-      title: "Foil Stamping",
-      description:
-        "Add a touch of luxury with our foil stamping service. This technique applies metallic or pigmented foil to paper using heat and pressure, creating a stunning shine and dimension that catches the light and elevates your printed pieces.",
-      details: [
-        "Gold, silver, copper & rose gold foils",
-        "Holographic & specialty foils",
-        "Combination with letterpress",
-        "Business cards & stationery",
-        "Packaging & labels",
-      ],
-      image: "/placeholder.svg?height=800&width=1200",
-    },
-    {
-      id: "embossing",
-      title: "Embossing & Debossing",
-      description:
-        "Create dimension and texture with our embossing and debossing techniques. Embossing raises the design above the paper surface, while debossing creates an impressed effect. Both add a sophisticated tactile element to your printed materials.",
-      details: [
-        "Blind embossing (no ink)",
-        "Combination with foil or letterpress",
-        "Custom dies created from your design",
-        "Multiple level embossing",
-        "Business cards & stationery",
-      ],
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/libreta.png",
     },
     {
       id: "custom",
-      title: "Custom Stationery",
+      title: "Libretas con Suaje",
       description:
-        "Express your personal style or brand identity with our custom stationery services. From wedding suites to personal notecards, we create beautifully crafted paper goods that make a lasting impression and reflect your unique aesthetic.",
+        "Nuestras libretas con suaje destacan por sus detalles únicos y acabados personalizados. El suaje permite crear formas o cortes especiales en la portada o el interior, añadiendo un toque creativo y distintivo. Son ideales para marcas que buscan diferenciarse y ofrecer una experiencia visual y táctil desde el primer vistazo.",
       details: [
-        "Wedding invitation suites",
-        "Personal stationery & notecards",
-        "Custom envelopes & liners",
-        "Hand-calligraphy options",
-        "Premium papers & materials",
+        "Libretas corporativas con logotipo troquelado",
+        "Libretas para eventos o conferencias con suaje de detalles",
+        "Cuadernos de lujo con suaje en la portada",
+        "Libretas para regalos promocionales con cortes creativos",
       ],
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/libreta_suaje.png",
+    },
+    {
+      id: "foil",
+      title: "Publicidad",
+      description:
+        "Dale vida a tu marca a través de impresos publicitarios que combinan funcionalidad y diseño. Desde revistas corporativas y catálogos de productos hasta libretas personalizadas y material promocional, cada pieza se convierte en una oportunidad para comunicar tu identidad con impacto.",
+      details: [
+        "Revistas",
+        "Folletos y trípticos informativos",
+        "Libretas personalizadas con branding",
+        "Volantes promocionales",
+        "Catálogos corporativos",
+      ],
+      image: "/revistas.png",
+    },
+    {
+      id: "embossing",
+      title: "Cajas",
+      description:
+        "Nuestras cajas personalizadas están diseñadas para elevar la presentación de tu producto y reforzar la identidad de tu marca. Ofrecemos soluciones funcionales y estéticas, con acabados de alta calidad, ideales para packaging corporativo, regalos empresariales o ediciones especiales.",
+      details: [
+        "Cajas para productos",
+        "Cajas para regalos corporativos",
+        "Cajas plegables con diseño personalizado",
+        "Cajas para kits promocionales",
+      ],
+      image: "/cajas.png",
     },
     {
       id: "business",
-      title: "Business Printing",
+      title: "Papelería Personalizada",
       description:
-        "Elevate your brand with our premium business printing services. We create distinctive business cards, letterheads, and marketing materials that communicate quality and attention to detail, helping your business stand out in a memorable way.",
+        "Nuestra papelería personalizada transforma la imagen de tu marca con productos únicos y funcionales. Desde folders y calendarios hasta tarjetas de presentación y hojas membretadas, cada pieza está diseñada para transmitir tu estilo corporativo de manera profesional y elegante.",
       details: [
-        "Business cards & stationery",
-        "Brochures & lookbooks",
-        "Presentation folders",
-        "Branded packaging",
-        "Marketing materials",
+        "Folders y carpetas personalizadas",
+        "Calendarios corporativos",
+        "Sobres personalizados",
+        "Carpetas personalizadas",
       ],
-      image: "/placeholder.svg?height=800&width=1200",
-    },
-    {
-      id: "specialty",
-      title: "Specialty Techniques",
-      description:
-        "Explore our range of specialty printing techniques to create truly unique printed pieces. From edge painting to die-cutting, these finishing touches add an extra level of craftsmanship and distinction to your projects.",
-      details: [
-        "Edge painting",
-        "Die-cutting",
-        "Laser cutting",
-        "Hand-binding",
-        "Custom finishing options",
-      ],
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/calendario.png",
     },
   ];
 
@@ -96,7 +79,7 @@ export default function ServicesPage() {
       <section className="relative w-full h-[50vh] overflow-hidden bg-neutral-100">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1000&width=2000"
+            src="/printing.jpg"
             alt="Printing press in action"
             fill
             priority
@@ -105,11 +88,11 @@ export default function ServicesPage() {
         </div>
         <div className="container relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
           <h1 className="font-serif text-4xl md:text-6xl font-light tracking-tight mb-6">
-            Our Services
+            Nuestros Servicios
           </h1>
           <p className="text-lg md:text-xl max-w-2xl text-neutral-600">
-            Discover our range of premium printing techniques and services, each
-            crafted with attention to detail and artistic excellence.
+            Descubre nuestra gama de técnicas y servicios de impresión premium,
+            cada uno elaborado con atención al detalle y excelencia artística.
           </p>
         </div>
       </section>
@@ -159,7 +142,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Paper & Materials */}
-      <section className="py-20 bg-neutral-50">
+      {/* <section className="py-20 bg-neutral-50">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
@@ -232,10 +215,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Custom Projects */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -271,10 +254,10 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section className="py-20 bg-neutral-50">
+      {/* <section className="py-20 bg-neutral-50">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-3xl font-light mb-12 text-center">
@@ -318,10 +301,10 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 primary-700 text-white">
+      {/* <section className="py-20 primary-700 text-white">
         <div className="container px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
             Ready to Start Your Project?
@@ -340,7 +323,7 @@ export default function ServicesPage() {
             <Link href="/contact">Get in Touch</Link>
           </Button>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
