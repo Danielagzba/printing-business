@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#foil"
+                  href="/services#custom"
                   className="text-neutral-400 hover:text-amber-500 transition-colors"
                 >
                   Libretas con Suaje
@@ -56,7 +56,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#embossing"
+                  href="/services#foil"
                   className="text-neutral-400 hover:text-amber-500 transition-colors"
                 >
                   Publicidad
@@ -64,10 +64,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services#custom"
+                  href="/services#embossing"
                   className="text-neutral-400 hover:text-amber-500 transition-colors"
                 >
-                  Papelería Personalizada
+                  Cajas
                 </Link>
               </li>
               <li>
@@ -75,7 +75,7 @@ export default function Footer() {
                   href="/services#business"
                   className="text-neutral-400 hover:text-amber-500 transition-colors"
                 >
-                  Carpetas y Sobres
+                  Papelería Personalizada
                 </Link>
               </li>
             </ul>
@@ -138,8 +138,14 @@ export default function Footer() {
             <address className="not-italic text-neutral-400 space-y-2">
               <p>Jesus García Morales 404</p>
               <p>Ciudad de México</p>
-              <p className="mt-4">servigrafic@live.com.mx</p>
-              <p>+52 1 55 5143 0814</p>
+              <p className="mt-4">
+                <a href="mailto:servigrafic@live.com.mx">
+                  servigrafic@live.com.mx
+                </a>
+              </p>
+              <p className="mt-4">
+                <a href="tel:+525551430814">+52 1 55 5143 0814</a>
+              </p>
             </address>
           </div>
         </div>

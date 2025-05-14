@@ -27,8 +27,8 @@ export default function Home() {
         <div className="container relative z-10 px-4 py-20 md:py-32">
           <div className="max-w-xl">
             <h1 className="font-serif text-5xl md:text-7xl font-light tracking-tight mb-6">
-              <span className="block">{t("hero.title.line1")}</span>
-              <span className="block">{t("hero.title.line2")}</span>
+              <span className="block">{t("Servigrafic")}</span>
+              <span className="block">{t("Solutions")}</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-neutral-600 max-w-md">
               {t("hero.subtitle")}
@@ -161,7 +161,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="py-24 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
@@ -200,8 +199,10 @@ export default function Home() {
                       <Image
                         src={step.image || "/placeholder.svg"}
                         alt={step.title}
-                        fill
-                        className="object-cover"
+                        layout="intrinsic" // Using intrinsic to define the aspect ratio
+                        width={400} // Define the width
+                        height={300} // Define the height
+                        className="object-cover max-w-[80%] mx-auto" // Limiting the max-width and centering the image
                       />
                     </div>
                   </div>
