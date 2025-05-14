@@ -29,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        {/* Link to your favicon */}
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className={`${playfair.variable} ${lato.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
