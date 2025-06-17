@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function Footer() {
@@ -29,6 +29,14 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
+              <Link
+                href="https://www.linkedin.com/company/servigrafic-solutions/"
+                target="_blank"
+                className="hover:text-amber-500 transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
             </div>
           </div>
 
@@ -39,44 +47,29 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/services#letterpress"
-                  className="text-neutral-400 hover:text-amber-500 transition-colors"
-                >
+                <span className="text-neutral-400">
                   Libretas Personalizadas
-                </Link>
+                </span>
               </li>
               <li>
-                <Link
-                  href="/services#custom"
-                  className="text-neutral-400 hover:text-amber-500 transition-colors"
-                >
+                <span className="text-neutral-400">
                   Libretas con Suaje
-                </Link>
+                </span>
               </li>
               <li>
-                <Link
-                  href="/services#foil"
-                  className="text-neutral-400 hover:text-amber-500 transition-colors"
-                >
+                <span className="text-neutral-400">
                   Publicidad
-                </Link>
+                </span>
               </li>
               <li>
-                <Link
-                  href="/services#embossing"
-                  className="text-neutral-400 hover:text-amber-500 transition-colors"
-                >
+                <span className="text-neutral-400">
                   Cajas
-                </Link>
+                </span>
               </li>
               <li>
-                <Link
-                  href="/services#business"
-                  className="text-neutral-400 hover:text-amber-500 transition-colors"
-                >
+                <span className="text-neutral-400">
                   Papelería Personalizada
-                </Link>
+                </span>
               </li>
             </ul>
           </div>

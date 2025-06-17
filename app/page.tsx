@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
 
@@ -13,6 +13,19 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-neutral-50">
+        {/* Background image for mobile */}
+        <div className="absolute inset-0 lg:hidden">
+          <div className="relative h-full w-full">
+            <Image
+              src="/printing.jpg"
+              alt="Proceso de impresión artística"
+              fill
+              priority
+              className="object-cover opacity-20"
+            />
+          </div>
+        </div>
+        {/* Side image for desktop */}
         <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
           <div className="relative h-full w-full">
             <Image
@@ -37,17 +50,9 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="primary-700 hover:primary-800 rounded-none px-8"
+                className="bg-primary hover:bg-primary/90 text-white rounded-none px-8"
               >
-                {/* <Link href="/gallery">{t("hero.button.explore")}</Link> */}
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:primary-50 rounded-none px-8"
-              >
-                {/* <Link href="/contact">{t("hero.button.contact")}</Link> */}
+                <Link href="#trabajos-destacados">Explora nuestro trabajo</Link>
               </Button>
             </div>
           </div>
@@ -55,8 +60,77 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-neutral-50 to-transparent"></div>
       </section>
 
+      {/* Featured Work */}
+      <section id="trabajos-destacados" className="py-24 bg-white">
+        <div className="container px-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-light mb-16 text-center">
+            {t("featured.title")}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Libretas",
+
+                image: "https://i.imgur.com/gZe11T9.png",
+              },
+              {
+                title: "Libretas con Suaje",
+
+                image: "https://i.imgur.com/QucSkQz.jpeg",
+              },
+              {
+                title: "Publicidad",
+
+                image: "/revistas.png",
+              },
+              {
+                title: "Packaging Personalizado",
+
+                image: "https://i.imgur.com/ovnpBDU.png",
+              },
+              {
+                title: "Calendarios",
+
+                image: "https://i.imgur.com/WFFK2Hz.png",
+              },
+              {
+                title: "Carpetas",
+
+                image: "/carpetas.png",
+              },
+            ].map((work, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="relative aspect-square overflow-hidden mb-4">
+                  <Image
+                    src={work.image || "/placeholder.svg"}
+                    alt={work.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="font-serif text-lg">{work.title}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-16">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:primary-50 rounded-none px-8"
+            >
+              <Link href="/gallery">Galería</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Intro Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-neutral-50">
         <div className="container px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-serif text-3xl md:text-4xl font-light mb-6">
@@ -90,77 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Work */}
-      <section className="py-24 bg-neutral-50">
-        <div className="container px-4">
-          <h2 className="font-serif text-3xl md:text-4xl font-light mb-16 text-center">
-            {t("featured.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Libretas",
-
-                image: "/libreta.png",
-              },
-              {
-                title: "Libretas con Suaje",
-
-                image: "/libreta_suaje.png",
-              },
-              {
-                title: "Publicidad",
-
-                image: "/revistas.png",
-              },
-              {
-                title: "Packaging Personalizado",
-
-                image: "/cajas.png",
-              },
-              {
-                title: "Calendarios",
-                category: "Arte",
-                image: "/calendario.png",
-              },
-              {
-                title: "Carpetas",
-
-                image: "/carpetas.png",
-              },
-            ].map((work, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="relative aspect-square overflow-hidden mb-4">
-                  <Image
-                    src={work.image || "/placeholder.svg"}
-                    alt={work.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h3 className="font-serif text-lg">{work.title}</h3>
-                    <p className="text-sm text-neutral-500">{work.category}</p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* <div className="text-center mt-16">
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-primary text-primary hover:primary-50 rounded-none px-8"
-            >
-              <Link href="/gallery">{t("featured.viewAll")}</Link>
-            </Button>
-          </div> */}
-        </div>
-      </section>
-
       <section className="py-24 bg-white">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
@@ -173,7 +176,7 @@ export default function Home() {
                   number: "01",
                   title: t("process.consultation.title"),
                   description: t("process.consultation.description"),
-                  image: "/consulta.jpg",
+                  image: "https://i.imgur.com/hwICKx0.jpeg",
                 },
                 {
                   number: "02",
@@ -277,14 +280,13 @@ export default function Home() {
           <p className="text-lg max-w-2xl mx-auto mb-10 opacity-90">
             {t("cta.description")}
           </p>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="text-primary border-white hover:primary-800 rounded-none px-8"
+          <a 
+            href="mailto:servigrafic@live.com.mx" 
+            className="inline-flex items-center justify-center p-4 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+            aria-label="Enviar correo electrónico"
           >
-            {/* <Link href="/contact">{t("cta.button")}</Link> */}
-          </Button>
+            <Mail className="w-8 h-8" />
+          </a>
         </div>
       </section>
     </div>
