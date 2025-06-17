@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Twitter, Linkedin, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function Footer() {
@@ -36,6 +36,14 @@ export default function Footer() {
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link
+                href="https://g.co/kgs/1FJV65M"
+                target="_blank"
+                className="hover:text-amber-500 transition-colors"
+              >
+                <MapPin className="h-5 w-5" />
+                <span className="sr-only">Google Maps</span>
               </Link>
             </div>
           </div>
