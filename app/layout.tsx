@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/printing.jpg",
+        url: "https://servigraficsolutions.com/printing.jpg",
         width: 1200,
         height: 630,
         alt: "Servigrafic Solutions - Servicios de Impresión",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Servigrafic Solutions - Impresión y Diseño",
     description: "Transformamos tus ideas en piezas impresas bellamente elaboradas.",
-    images: ["/printing.jpg"],
+    images: ["https://servigraficsolutions.com/printing.jpg"],
   },
   robots: {
     index: true,
